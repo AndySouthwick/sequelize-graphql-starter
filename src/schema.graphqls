@@ -1,0 +1,8 @@
+# Full service schema
+
+type Query{
+    version: String!
+    eee: String!
+}
+
+

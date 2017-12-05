@@ -1,0 +1,32 @@
+{
+  "name": "crmcon-api",
+  "version": "1.0.0",
+  "description": "crm connections between infusionsoft and entraport",
+  "main": "src/index.js",
+  "repository": "https://github.com/AndySouthwick/crmcon-api.git",
+  "author": "Andrew Southwick <asouthwick01@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-inline-import": "^2.0.6",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "start": "BABEL_DISABLE_CACHE=1 nodemon src/index.js --exec babel-node -e js,graphql,graphqls",
+    "build": "babel src -d dist",
+    "serve": "node dist/index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "graphql": "^0.10.5",
+    "graphql-server-express": "^1.1.0",
+    "graphql-tools": "^1.2.0",
+    "pg": "^7.1.2",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.4.10"
+  }
+}
